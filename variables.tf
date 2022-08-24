@@ -52,3 +52,8 @@ variable "address_prefixes" {
   type        = list(string)
   description = "name of the address_prefixes"
 }
+
+variable "privateserviceconnection_name" {
+  type        = string
+  description = "name of the privateserviceconnection_name"
+}
