@@ -13,7 +13,3 @@ output "azurerm_lb" {
 output "azurerm_private_link_service" {
   value = azurerm_private_link_service.privatelink
 }
-
-output "azurerm_private_endpoint" {
-  value = azurerm_private_endpoint.endpoint
-}
