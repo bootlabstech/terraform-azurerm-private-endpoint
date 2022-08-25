@@ -11,7 +11,7 @@ resource "azurerm_subnet" "service" {
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = var.address_prefixes
 
-  enforce_private_link_service_network_policies = true
+  enforce_private_link_service_network_policies = false
 }
 
 resource "azurerm_subnet" "endpoint" {
@@ -20,7 +20,7 @@ resource "azurerm_subnet" "endpoint" {
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = var.address_prefixes
 
-  enforce_private_link_endpoint_network_policies = true
+  enforce_private_link_endpoint_network_policies = false
 }
 
 resource "azurerm_public_ip" "public_ip" {
