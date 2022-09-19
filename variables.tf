@@ -59,6 +59,6 @@ variable "privateserviceconnection_name" {
 }
 
 variable "endpoint_address_prefixes" {
-  type        = string
+  type        = list(string)
   description = "(optional) describe your variable  10.0.2.0/24"
 }
