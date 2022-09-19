@@ -43,17 +43,22 @@ variable "private_endpoint_name" {
   description = "name of the azurerm_private_endpoint"
 }
 
-#variable "address_space" {
-#  type        = list(string)
-#  description = "name of the address_space"
-#}
+variable "address_space" {
+  type        = list(string)
+  description = "name of the address_space. ex 10.0.0.0/16"
+}
 
-#variable "address_prefixes" {
-#  type        = list(string)
-#  description = "name of the address_prefixes"
-#}
+variable "address_prefixes" {
+  type        = list(string)
+  description = "name of the address_prefixes 10.0.1.0/24"
+}
 
 variable "privateserviceconnection_name" {
   type        = string
   description = "name of the privateserviceconnection_name"
+}
+
+variable "endpoint_address_prefixes" {
+  type        = string
+  description = "(optional) describe your variable  10.0.2.0/24"
 }

@@ -1,6 +1,6 @@
 resource "azurerm_virtual_network" "vnet" {
   name                = var.vnet_name
-  address_space       = ["10.0.0.0/16"]
+  address_space       = var.address_space
   location            = var.location
   resource_group_name = var.resource_group_name
 }
@@ -9,7 +9,7 @@ resource "azurerm_subnet" "service" {
   name                 = var.service_name
   resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = ["10.0.1.0/24"]
+  address_prefixes     = var.address_prefixes
 
   enforce_private_link_service_network_policies = true
 }
@@ -18,7 +18,7 @@ resource "azurerm_subnet" "endpoint" {
   name                 = var.endpoint_name
   resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = ["10.0.2.0/24"]
+  address_prefixes     = var.endpoint_address_prefixes
 
   enforce_private_link_endpoint_network_policies = true
 }
