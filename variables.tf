@@ -38,10 +38,10 @@ variable "private_connection_resource_id" {
 
 
 
-# variable "resource_group_name" {
-#   type        = string
-#   description = "name of the resource group"
-# }
+variable "private_dns_zone_ids" {
+  type        = list(string)
+  description = "name of the resource group"
+}
 
 # variable "location" {
 #   type        = string
