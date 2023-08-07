@@ -15,6 +15,11 @@ resource "azurerm_private_endpoint" "endpoint" {
     name = "default"
     private_dns_zone_ids = var.private_dns_zone_ids
   }
+  lifecycle {
+    ignore_changes = [
+      tags,
+    ]
+  }
 
 
 
