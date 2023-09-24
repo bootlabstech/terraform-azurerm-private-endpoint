@@ -1,6 +1,6 @@
 output "id" {
   value = azurerm_private_endpoint.endpoint.id
-  
+
 }
 # output "azurerm_virtual_network" {
 #   value = azurerm_virtual_network.vnet
