@@ -12,12 +12,6 @@ resource "azurerm_private_endpoint" "endpoint" {
     subresource_names              = var.subresource_names
 
   }
-  # dynamic "ip_configuration" {
-  #   for_each = var.ip_configuration ? [{}] : []
-  #     name = var.name
-  #     private_ip_address = var.private_ip_address
-
-  # }
   private_dns_zone_group {
     name                 = "${var.name}-dnszone"
     private_dns_zone_ids = var.private_dns_zone_ids
